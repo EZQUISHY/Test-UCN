@@ -1,0 +1,112 @@
+/* Tipografía base */
+@font-face {
+    font-family: 'Momcake';
+    src: url(/Fonts/Momcake_Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Momcake';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Imagen de fondo con ajustes */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/liquid.png'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px) brightness(0.8); /* Blur sutil y oscurecimiento */
+    z-index: -1;
+}
+
+/* Contenedor del formulario */
+.signup-container {
+    width: 400px;
+    padding: 40px;
+    background: rgba(77, 77, 77, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Encabezado */
+.signup-container h2 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Descripción */
+.signup-container p {
+    margin-bottom: 30px;
+    color: #d1d1d1;
+    font-weight: 300;
+}
+
+/* Campos de entrada */
+.signup-container input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.signup-container input:focus {
+    box-shadow: 0 0 8px rgba(58, 132, 255, 0.7);
+}
+
+/* Botón */
+.signup-container button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #4A90E2, #357ABD);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.signup-container button:hover {
+    background: linear-gradient(45deg, #357ABD, #4A90E2);
+    transform: scale(1.05);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

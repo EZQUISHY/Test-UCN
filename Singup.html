@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="CSS/singup.css"> <!-- Enlace al CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background"></div> <!-- Imagen de fondo -->
+
+    <!-- Contenedor principal del formulario -->
+    <div class="signup-container">
+        <h2>¡Crea tu Cuenta!</h2>
+        <p>Regístrate para gestionar aulas y laboratorios</p>
+        <form id="signupForm">
+            <input type="text" id="name" placeholder="Nombre Completo" required>
+            <input type="email" id="email" placeholder="Correo Electrónico" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña" required>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+
+    <script>
+        // Captura el evento submit del formulario
+        document.getElementById("signupForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // Evita que la página se recargue automáticamente
+
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Las contraseñas no coinciden.");
+                return; // Si las contraseñas no coinciden, detiene el proceso
+            }
+
+            alert("Registro exitoso. Redirigiendo al inicio de sesión...");
+
+            // Redirección al login.html después de un registro exitoso
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
+

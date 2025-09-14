@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Aulas y Laboratorios</title>
+    <link rel="stylesheet" href="CSS/styleselect.css"> <!-- Asegúrate de usar la misma hoja de estilo -->
+</head>
+<body>
+    <div class="background"></div> <!-- Imagen de fondo -->
+
+    <div class="container">
+        <h1>Seleccione una opcion</h1>
+
+        <div class="options">
+            <!-- Opción para Aulas -->
+            <div class="option-card">
+                <img src="images/aulas.jpg" alt="Gestionar Aulas">
+                <button onclick="irAulas()">Gestionar Aulas</button>
+            </div>
+
+            <!-- Opción para Laboratorios Tecnológicos -->
+            <div class="option-card">
+                <img src="images/labs.jpg" alt="Laboratorios Tecnológicos">
+                <button onclick="irLaboratorios()">Laboratorios Tecnológicos</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function irAulas() {
+            window.location.href = "gestion-aulas.html"; // Redirige a la página de gestión de aulas
+        }
+
+        function irLaboratorios() {
+            window.location.href = "laboratorios.html"; // Redirige a la página de laboratorios
+        }
+    </script>
+</body>
+</html>
